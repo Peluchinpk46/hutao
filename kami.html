@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Cramer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            margin: 5px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+            box-sizing: border-box;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Método de Cramer</h1>
+        <p>Forma general del sistema de ecuaciones lineales 2x2:</p>
+        <p>a<sub>1</sub>x + b<sub>1</sub>y = c<sub>1</sub></p>
+        <p>a<sub>2</sub>x + b<sub>2</sub>y = c<sub>2</sub></p>
+        <p>Captura los coeficientes:</p>
+        <form id="cramerForm">
+            <label for="a1">a<sub>1</sub>:</label><br>
+            <input type="number" id="a1" name="a1" required><br>
+            <label for="b1">b<sub>1</sub>:</label><br>
+            <input type="number" id="b1" name="b1" required><br>
+            <label for="c1">c<sub>1</sub>:</label><br>
+            <input type="number" id="c1" name="c1" required><br>
+            <label for="a2">a<sub>2</sub>:</label><br>
+            <input type="number" id="a2" name="a2" required><br>
+            <label for="b2">b<sub>2</sub>:</label><br>
+            <input type="number" id="b2" name="b2" required><br>
+            <label for="c2">c<sub>2</sub>:</label><br>
+            <input type="number" id="c2" name="c2" required><br>
+            <input type="button" value="Resolver" onclick="resolverSistema()">
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+     function resolverSistema() {
+            const a1 = parseFloat(document.getElementById('a1').value);
+            const b1 = parseFloat(document.getElementById('b1').value);
+            const c1 = parseFloat(document.getElementById('c1').value);
+            const a2 = parseFloat(document.getElementById('a2').value);
+            const b2 = parseFloat(document.getElementById('b2').value);
+            const c2 = parseFloat(document.getElementById('c2').value);
+
+            const D = (a1 * b2) - (a2 * b1);
+            const Dx = (c1 * b2) - (c2 * b1);
+            const Dy = (a1 * c2) - (a2 * c1);
+
+            let resultText = '';
+
+            if (D !== 0) {
+                const x = Dx / D;
+                const y = Dy / D;
+                resultText = Solución: <br> x = ${x.toFixed(2)} <br> y = ${y.toFixed(2)};
+            } else if (Dx === 0 && Dy === 0) {
+                resultText = 'El sistema tiene infinitas soluciones.';
+            } else {
+                resultText = 'El sistema no tiene solución.';
+            }
+
+            document.getElementById('result').innerHTML = resultText;
+        }
+        </script>
+
+    
+</body>
+</html>
