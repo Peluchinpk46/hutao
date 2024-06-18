@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales de Construcción</title>
+    <style>
+        
+            
+
+        #miContenedor1 {
+    width: auto;
+    margin: auto;
+    background-color: #87FF7E;
+    padding: 5px;
+  }
+
+        #miContenedor {
+    width: 20%;
+    margin: auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+        
+        .btn-pagar{
+            border: 2px solid green; 
+            background-color: #f2f2f2;   
+            color: green; 
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #5c5c5c;
+}
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #010935; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        #search-bar { margin: 20px 0; }
+        #categories { display: flex; justify-content: space-around; padding: 20px; }
+        .category-item { text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        
+        <ul>
+            <!-- Barra de Búsqueda -->
+            
+            <div><center><img src="reformar.jpg" width="270" height="135"></center></div>
+         <div>.</div>
+
+
+        
+        
+    </div>
+    <ul style="display: auto; justify-content: space-between;">
+    <li><a href="pag.html">Principal</a></li>
+    <li><a href="pag4.html">Acabados</a></li>
+    <li><a href="pag6.html">Aceros</a></li>
+    <li><a href="paguina11.html">Cementos</a></li>
+    <li><a href="pag5.html">Herramientas de construcción</a></li>
+    <li><a href="pag3.html">Materiales de construcción</a></li>
+    <li><a href="#about">Acerca de</a></li>
+    <li id="search-bar" style="display: fixe;"  style="margin-left: auto;">
+        <input type="text" placeholder="Busca productos aquí">
+        <button type="submit">Buscar</button>
+    </li>
+</ul>
+        </ul>
+    </nav>
+    <h2>Centro de compras</h2>
+    <div id="miContenedor1">
+     
+     <center><h2>Tiket Generado Exitosamente</h2></center>
+ </div>
+</header>
+<div>.</div>
+<div id="miContenedor">
+  <center>
+    <h1>Recibo de Compra</h1>
+    <h2>Casa De Materiales Reformar E Construir</h2>
+    <p>Dirección: Calle 123, Ciudad, País</p>
+    <p>Articulos:</p>
+
+    <ul id="datos"></ul>
+    <h1><p>Total: $<span id="total">0</span></p></h1>
+    <center><p>El costo total de todos tus productos se calculan en pantalla.</p></center>
+</div>
+<div><a href="pag.html" class="btn-pagar" onclick="limpiarCarrito()">Volver al inicio</a></div>
+<div style="position: fixed; right: 20px; bottom: 20px;">
+    <div><a class="btn-pagar" onclick="openDialog()">Mandarme a mi correo</a></div>
+</div>
+<div id="emailDialog" style="display: none; position: fixed; width: 300px; height: 200px; background: white; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-sizing: border-box;">
+    <h2>Ingresa tu correo</h2>
+    
+    <input type="email" id="emailInput" placeholder="Ejemplo:usuario@gmail.com" style="width: 100%;">
+    <div>.</div>
+    <center><div><a class="btn-pagar" onclick="sendEmail()">Enviar</a></div></center>
+</div>
+<div id="sendEnviar" style="display: none; position: fixed; width: 300px; height: 200px; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 2px Deep blue; background: white; text-align: center;">
+    <center><h2>Tiket enviado exitosamente</h2></center>
+    <center><div><a href="pag.html" class="btn-pagar" onclick="">Aceptar</a></div></center></div>
+<script>
+window.onload = function() {
+    recuperarDatos();
+}
+
+function recuperarDatos() {
+    // Recuperar los datos del almacenamiento local
+    var carritoJSON = localStorage.getItem("carrito");
+
+    // Convertir la cadena JSON a un objeto
+    var carrito = JSON.parse(carritoJSON);
+
+    // Mostrar los datos en la página
+    var datos = document.getElementById("datos");
+    var total = 0;
+    carrito.forEach(item => {
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(item.producto + ' - $' + item.precio));
+        datos.appendChild(li);
+        total += item.precio;
+    });
+    document.getElementById("total").innerHTML = total;
+}
+function openDialog() {
+    document.getElementById('emailDialog').style.display = 'block';
+}
+
+function sendEmail() {
+    var email = document.getElementById('emailInput').value;
+    document.getElementById('sendEnviar').style.display = 'block';
+    // Aquí necesitarías enviar el correo electrónico utilizando un servidor o un servicio de terceros
+    console.log('Enviar correo electrónico a ' + email);
+}
+function sendEnviar() {
+    document.getElementById('sendEnviar').style.display = 'block';
+
+}
+function limpiarCarrito() {
+    localStorage.removeItem("carrito");
+}
+
+</script>
+
+
+
+  </center>
+</div>
+.
+<footer>
+  <p>Casa De Materiales &copy; 2024 ReformarEconstruir.com</p>
+</footer>
+
+</body>
+</html>

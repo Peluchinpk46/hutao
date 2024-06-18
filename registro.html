@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="loginEstilos.css">
+	<title></title>
+</head>
+<body>
+	<p>Para registrarte ingresa tus datos personales</p>
+	<form action="index.php" method="POST">
+
+		<input type="text" name="nom" placeholder="Nombre" id="nom" required><br>
+		<input type="text" name="apePat" placeholder="Apellido paterno" id="apePat" required><br>
+		<input type="text" name="apeMat" placeholder="Apellido materno" id="apeMat" required=""><br>
+		<input type="text" name="dir" placeholder="Direccion" required><br>
+		<input type="text" name="tel" placeholder="Numero telefonico" required><br>
+		<input type="email" name="diremail" placeholder="Ej.: usuario@servidor.com" required><br>
+		<p>Finalmente captura el usuario y password, con el que accederas posteriormente</p>
+		<input type="text" name="texto" placeholder="Usuario" id="texto" required><br>
+		<input type="text" name="pass" placeholder="Password" id="pass" required><br><br>
+
+		<input type="submit" name="Guardar valores">
+		<input type="reset" value="restaurar">
+		<div id="todolist">
+			<?php
+
+				$servidor="localhost";
+				$nombreusuario="root";
+				$password="";
+				$db="logeo";
+
+		    $conexion= new mysqli($servidor, $nombreusuario, $pasword, $db);
+
+		    if($conexion->connect_error){ di}
+
+
+		</div>
+<
+</body>
+</html>

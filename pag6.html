@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales de Construcción</title>
+    <style>
+
+        .product {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+        .btn-agregar {
+            border: 2px solid green; 
+            background-color: white;   
+            color: green; 
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+        .cart {
+            position: fixed;
+            background-color: white;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #000;
+            padding: 10px;
+            display: none; /* ocultar inicialmente */
+        }
+        .nav {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 1px;
+            padding: 1px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background-color: #ddd;
+            border: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .btn-finalizar{
+            border: 2px solid green; 
+            background-color: white;   
+            color: green; 
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #5c5c5c;
+}
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #010935; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        #search-bar { margin: 20px 0; }
+        #categories { display: flex; justify-content: space-around; padding: 20px; }
+        .category-item { text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <!-- Barra de Búsqueda -->
+            
+             <div><center><img src="reformar.jpg" width="300" height="150"></center></div>
+         <div>.</div>
+
+
+        
+    </div>
+    
+            <ul style="display: auto; justify-content: space-between;">
+    <li><a href="pag.html">Principal</a></li>
+    <li><a href="pag4.html">Acabados</a></li>
+    <li><a href="pag6.html">Aceros</a></li>
+    <li><a href="paguina11.html">Cementos</a></li>
+    <li><a href="pag5.html">Herramientas de construcción</a></li>
+    <li><a href="pag3.html">Materiales de construcción</a></li>
+    <li><a href="#about">Acerca de</a></li>
+    <li id="search-bar" style="display: fixe;"  style="margin-left: auto;">
+        <input type="text" placeholder="Busca productos aquí">
+        <button type="submit">Buscar</button>
+    </li>
+</ul>
+        </ul>
+    </nav>
+     <h2>Materiales de construcción Categorías</h2>
+</header>
+
+<main>
+    <!-- Sección de Categorías -->
+    <section id="categories">
+        
+        <div class="product">
+           <img src="carretilla.png" alt="Producto 26" >
+            <h2>CARRETILLA</h2>
+            <p>Herramientas para Exteriores y Jardinería</p><p>Presentación: 4.5 pies.</p>
+               <center> <h2>$916.14 IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('CARRETILLA', 'carretilla.png', 'Herramientas para Exteriores y Jardinería', 916.14)">Agregar al carrito</a></center>
+       </div>
+       
+      <div class="product">
+           <img src="cincel.png" alt="Producto 19">
+          <h2>CINCEL CORTE FRÍO</h2>
+            <p>Herramienta manual.</p><p>Medidas Disponibles:
+                       1p x 12p, 
+                  7/8p x 12p.</p>
+               <center> <h2>$99.31 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('CINCEL CORTE FRÍO', 'cincel.png', 'Herramienta manual', 99.31)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="cuchara.png" alt="Producto 20">
+           <h2>CUCHARA PARA ALBAÑIL</h2>
+           <p>Herramienta manual.</p><p>Presentación: 9 y 10 pulgadas.</p>
+          <center> <h2>$80.38 IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('CUCHARA PARA ALBAÑIL', 'cuchara.png', 'Herramienta manual', 80.38)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="espatula.png" alt="Producto 21">
+           <h2>ESPÁTULA FLEXIBLE</h2>
+           <p>Herramienta manual.</p><p>Presentación: 2,3 y 4 Pulgadas.</p>
+           <center><h2>$30.04 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('ESPÁTULA FLEXIBLE', 'espatula.png', 'Herramienta manual', 30.04)">Agregar al carrito</a></center>
+       </div>
+       
+    
+    </section>
+    <section id="categories">
+        
+        <div class="product">
+           <img src="flexo.png" alt="Producto 22" >
+            <h2>FLEXÓMETRO</h2>
+            <p>Herramienta de Medición</p><p>Presentación: 3 y 5 m.<br>
+Color: Blanco.</p>
+               <center> <h2>$38.81 – IVA Incluido</h2>
+            <a href="#" class="btn-agregar" onclick="agregarAlCarrito('FLEXÓMETRO', 'flexo.png', 'Herramienta de Medición', 38.81)">Agregar al carrito</a></center>
+       </div>
+       
+      <div class="product">
+           <img src="llana.png" alt="Producto 23">
+          <h2>LLANA LISA</h2>
+            <p>Herramienta de Albañilería</p><p>Presentación: 11 Pulgadas.</p>
+               <center> <h2>$87.35 IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('LLANA LISA', 'llana.png', 'Herramienta de Albañilería', 87.35)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="nivel.png" alt="Producto 24">
+           <h2>NIVEL</h2>
+           <p>Herramienta de Medición</p><p>Presentación: 18 y 24 Pulgadas.</p>
+          <center> <h2>$106.38 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('NIVEL', 'nivel.png', 'Herramienta de Medición', 106.38)">Agregar al carrito</a></center>
+
+       </div>
+       <div class="product">
+    <img src="pala.png" alt="Producto 25">
+    <h2>PALA CUADRADA</h2>
+    <p>Herramienta para jardín</p><p>Presentacion: color naranja con negro</p>
+    <center><h2>$140.67 IVA Incluido</h2>
+    <a href="#" class="btn-agregar" onclick="agregarAlCarrito('Pala cuadrada', 'pala.png', 'Herramienta para jardín', 140.67)">Agregar al carrito</a></center>
+</div>
+
+<img id="floating-button" onclick="toggleCarrito()" src="carrito.png" alt="Carrito de compras" style="width: 70px; height: 70px;">
+
+<div class="cart" id="carrito" style="width: 25%; margin: auto; overflow-y: auto; max-height: 500px;">
+    <button class="close" onclick="closeCart()">×</button>
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito-list"></ul>
+    <div id="miContenedor"><p>Total: $<span id="total">0</span></p>
+    <a href="11.html" class="btn-finalizar" onclick="recuperarDatos()">Finalizar pedido</a>
+</div>
+
+<script>
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+function agregarAlCarrito(producto, imagen, descripcion, precio) {
+    carrito.push({ producto, imagen, descripcion, precio, cantidad: 1 });
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const carritoList = document.getElementById('carrito-list');
+    const totalElement = document.getElementById('total');
+    
+    carritoList.innerHTML = '';
+    
+    let total = 0;
+
+    carrito.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.style.textAlign = "center";
+        li.innerHTML = '<img src="' + item.imagen + '" alt="' + item.producto + '" style="width:70px;height:70px; max-width: 100%;"><br>' + item.producto + ' - ' + item.descripcion + ' - $' + item.precio * item.cantidad +
+        '<br><div><button onclick="disminuir(' + index + ')">-</button>' +
+        '<span id="contador' + index + '">' + item.cantidad + '</span>' +
+        '<button onclick="aumentar(' + index + ')">+</button></div>' +
+        '<br><button onclick="quitarProducto(' + index + ')" style="display:block; margin:auto;">Quitar producto</button>';
+        carritoList.appendChild(li);
+        total += item.precio * item.cantidad;
+    });
+
+    totalElement.textContent = total;
+    
+    // Guardar los datos del carrito en el almacenamiento local
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function aumentar(index) {
+    carrito[index].cantidad++;
+    actualizarCarrito();
+}
+
+function disminuir(index) {
+    if (carrito[index].cantidad > 1) {
+        carrito[index].cantidad--;
+    } else {
+        carrito.splice(index, 1);
+    }
+    actualizarCarrito();
+}
+
+function quitarProducto(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+}
+
+function toggleCarrito() {
+    const cartDisplay = document.getElementById('carrito');
+    if (cartDisplay.style.display === 'block') {
+        cartDisplay.style.display = 'none';
+    } else {
+        cartDisplay.style.display = 'block';
+    }
+}
+
+function closeCart() {
+    document.getElementById("carrito").style.display = "none";
+}
+
+// Actualizar el carrito al cargar la página
+window.onload = actualizarCarrito;
+</script>
+
+<style>
+#floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+</style>
+</div>
+
+       
+    
+    </section>
+    
+    
+
+<footer>
+  <p>Casa De Materiales &copy; 2024 ReformarEconstruir.com</p>
+</footer>
+
+</body>
+</html>

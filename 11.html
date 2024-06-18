@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales de Construcción</title>
+    <script type="main.js"></script>
+    <style>
+
+        #miContenedor {
+    width: 30%;
+    margin: auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+        
+        .btn-pagar{
+            border: 2px solid green; 
+            background-color: #f2f2f2;   
+            color: green; 
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #5c5c5c;
+}
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #010935; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        #search-bar { margin: 20px 0; }
+        #categories { display: flex; justify-content: space-around; padding: 20px; }
+        .category-item { text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        
+        <ul>
+            <!-- Barra de Búsqueda -->
+            
+            <div><center><img src="reformar.jpg" width="300" height="150"></center></div>
+         <div>.</div>
+
+
+        
+        
+    </div>
+    <ul style="display: auto; justify-content: space-between;">
+    <li><a href="pag.html">Principal</a></li>
+    <li><a href="pag4.html">Acabados</a></li>
+    <li><a href="pag6.html">Aceros</a></li>
+    <li><a href="paguina11.html">Cementos</a></li>
+    <li><a href="pag5.html">Herramientas de construcción</a></li>
+    <li><a href="pag3.html">Materiales de construcción</a></li>
+    <li><a href="#about">Acerca de</a></li>
+    <input type="text" id="searchInput" placeholder="Buscar producto..." onkeyup="buscarProducto()">
+<button onclick="buscarProducto()">Buscar</button>
+    </li>
+</ul>
+        </ul>
+    </nav>
+     <h2>Centro de compras</h2>
+</header>
+
+<div id="miContenedor">
+  <center>
+    <h2>Resumen del pedido</h2>
+
+    <ul id="datos"></ul>
+    <h1><p>Total: $<span id="total">0</span></p></h1>
+    <a href="0.html" class="btn-pagar" onclick="recuperarDatos(); compraExitosa()">Generar tiket</a>
+    <center><p>El costo total de todos tus productos se calculan en pantalla.</p></center>
+</div>
+<script>
+window.onload = function() {
+    recuperarDatos();
+}
+
+function recuperarDatos() {
+    // Recuperar los datos del almacenamiento local
+    var carritoJSON = localStorage.getItem("carrito");
+
+    // Convertir la cadena JSON a un objeto
+    var carrito = JSON.parse(carritoJSON);
+
+    // Mostrar los datos en la página
+    var datos = document.getElementById("datos");
+    var total = 0;
+    carrito.forEach(item => {
+        var li = document.createElement("li");
+        var img = document.createElement("img");
+        img.src = item.imagen;
+        img.alt = item.producto;
+        li.appendChild(img);
+        li.appendChild(document.createTextNode(item.producto + ' - $' + item.precio));
+        datos.appendChild(li);
+        total += item.precio;
+    });
+    document.getElementById("total").innerHTML = total;
+}
+
+function compraExitosa() {
+    alert("Tiket generado exitosamente");
+}
+</script>
+
+
+  </center>
+</div>
+.
+<footer>
+  <p>Casa De Materiales &copy; 2024 ReformarEconstruir.com</p>
+</footer>
+
+</body>
+</html>

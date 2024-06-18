@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales de Construcción</title>
+    <style>
+
+        .product {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 1px;
+        }
+        .btn-agregar {
+    border: 2px solid green; 
+    background-color: white; 
+    color: green; 
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+        
+        .cart {
+            position: fixed;
+            background-color: white;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #000;
+            padding: 10px;
+            display: none; /* ocultar inicialmente */
+        }
+        .nav {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 1px;
+            padding: 1px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background-color: #ddd;
+            border: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .btn-finalizar{
+            border: 2px solid green; 
+            background-color: white;   
+            color: green; 
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #5c5c5c;
+}
+
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #010935; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        #search-bar { margin: 20px 0; }
+        #categories { display: flex; justify-content: space-around; padding: 20px; }
+        .category-item { text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <!-- Barra de Búsqueda -->
+            
+            
+        <div><center><img src="reformar.jpg" width="300" height="100"></center></div>
+         <div>.</div>
+
+
+        
+    </div>
+    
+            <ul style="display: auto; justify-content: space-between;">
+    <li><a href="pag.html">Principal</a></li>
+    <li><a href="pag4.html">Acabados</a></li>
+    <li><a href="pag6.html">Aceros</a></li>
+    <li><a href="paguina11.html">Cementos</a></li>
+    <li><a href="pag5.html">Herramientas de construcción</a></li>
+    <li><a href="pag3.html">Materiales de construcción</a></li>
+    <li><a href="#about">Acerca de</a></li>
+    <li id="search-bar" style="display: fixe;"  style="margin-left: auto;">
+        <input type="text" placeholder="Busca productos aquí">
+        <button type="submit">Buscar</button>
+    </li>
+</ul>
+        </ul>
+    </nav>
+     <h2>BLOCKS</h2>
+</header>
+
+<main>
+    <!-- Sección de Categorías -->
+    <section id="categories">
+        
+        <div class="product">
+           <img src="block1.jpg" alt="Producto 9" >
+            <h2>BLOCK</h2>
+            <p>Block #8 Liso de Blockera Regiomontana</p><p>Lisos de 20 cm</p>
+               <center> <h2>$27.92 IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('BLOCK TERMICO #6', 'block1.jpg', 'Lisos de 20 cm', 27.30)">Agregar al carrito</a></center>
+       </div>
+       
+      <div class="product">
+           <img src="block1.jpg" alt="Producto 10">
+          <h2>BLOCK TERMICO #6</h2>
+            <p>Block Termico 6 (Block Ligero) Blockera Regiomontana</p><p>Medida: 15 x 20 x 40 cm.</p>
+               <center> <h2>$33.07 IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('BLOCK TERMICO #6', 'block1.jpg', 'Medida: 15 x 20 x 40 cm', 33.50)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="block1.jpg" alt="Producto 11">
+           <h2>BLOCK #8</h2>
+           <p>Block #8 (20cm) Unidad lisa</p><p>Especificaciones:Unidad de dos Huecos.</p>
+          <center> <h2>$28.55 IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('BLOCK #8', 'block1.jpg', '(20cm) Unidad lisa', 28.55)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="block2.jpg" alt="Producto 12">
+           <h2>BARROBLOCK</h2>
+           <p>BarroBlock Ladrillera Mecanizada</p><p>Medidas disponibles:20x30x20,15x30x20,10x30x30,<br>10x30x20.</p>
+           <center><h2>$12.60 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('BLOCK TERMICO #6', 'block2.jpg', 'BarroBlock Ladrillera Mecanizada', 12.60)">Agregar al carrito</a></center>
+       </div>
+       
+    
+    </section>
+    <section id="categories">
+        <div class="product">
+           <img src="block3.jpg" alt="Producto 13" >
+            <h2>BIOBLOCK</h2>
+             <p>Ladrillera Santa Clara</p>
+             <p>Medidas Disponibles:<br>
+
+Este producto se vende por Tarima. Cada tarima varia en el numero de piezas dependiendo el modelo.<br> 
+
+10x20x40   Tarima incluye 216 pza.<br>
+12x20x40    Tarima incluye 180 pza.<br>
+15x20x40   Tarima incluye 144 pza.<br>
+20x20x40  Tarima incluye 108 pza.</p>
+                <center><h2>$2,067.96 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('BIOBLOCK', 'block3.jpg', 'Ladrillera Santa Clara', 2067.96)">Agregar al carrito</a></center>
+       </div>
+    </section>
+    <h2>Arenas</h2>
+</header>
+
+<main>
+    <!-- Sección de Categorías -->
+    <section id="categories">
+        
+        <div class="product">
+           <img src="arena1.jpg" alt="Producto 14" >
+            <h2>TIERRA AMARILLA</h2>
+            <p>Material Terroso</p><p>Arena Amarilla 6 m3, Viaje</p>
+               <center> <h2>$2,300.00 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('TIERRA AMARILLA', 'arena1.jpg', 'Arena Amarilla 6 m3', 2,300.00)">Agregar al carrito</a></center>
+       </div>
+       
+      <div class="product">
+           <img src="arena2.jpg" alt="Producto 15">
+          <h2>ARENA MIXTA</h2>
+            <p>Impermeabilizante / Aislante térmico</p>
+            <p> Metro Cúbico</p>
+               <center> <h2>$950.00 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('ARENA MIXTA', 'arena2.jpg', 'Impermeabilizante / Aislante térmico', 950.00)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="arena3.jpg" alt="Producto 16">
+           <h2>GRAVA #1</h2>
+           <p>Compuesto utilizado en el concreto</p><p> Metro Cúbico</p>
+          <center> <h2>$550.00 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('GRAVA #1', 'arena3.jpg', 'Metro Cúbico', 550.00)">Agregar al carrito</a></center>
+
+
+       <img id="floating-button" onclick="toggleCarrito()" src="carrito.png" alt="Carrito de compras" style="width: 70px; height: 70px;">
+
+<div class="cart" id="carrito" style="width: 25%; margin: auto; overflow-y: auto; max-height: 500px;">
+    <button class="close" onclick="closeCart()">×</button>
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito-list"></ul>
+    <div id="miContenedor"><p>Total: $<span id="total">0</span></p>
+    <a href="11.html" class="btn-finalizar" onclick="recuperarDatos()">Finalizar pedido</a>
+</div>
+
+<script>
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+function agregarAlCarrito(producto, imagen, descripcion, precio) {
+    carrito.push({ producto, imagen, descripcion, precio, cantidad: 1 });
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const carritoList = document.getElementById('carrito-list');
+    const totalElement = document.getElementById('total');
+    
+    carritoList.innerHTML = '';
+    
+    let total = 0;
+
+    carrito.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.style.textAlign = "center";
+        li.innerHTML = '<img src="' + item.imagen + '" alt="' + item.producto + '" style="width:70px;height:70px; max-width: 100%;"><br>' + item.producto + ' - ' + item.descripcion + ' - $' + item.precio * item.cantidad +
+        '<br><div><button onclick="disminuir(' + index + ')">-</button>' +
+        '<span id="contador' + index + '">' + item.cantidad + '</span>' +
+        '<button onclick="aumentar(' + index + ')">+</button></div>' +
+        '<br><button onclick="quitarProducto(' + index + ')" style="display:block; margin:auto;">Quitar producto</button>';
+        carritoList.appendChild(li);
+        total += item.precio * item.cantidad;
+    });
+
+    totalElement.textContent = total;
+    
+    // Guardar los datos del carrito en el almacenamiento local
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function aumentar(index) {
+    carrito[index].cantidad++;
+    actualizarCarrito();
+}
+
+function disminuir(index) {
+    if (carrito[index].cantidad > 1) {
+        carrito[index].cantidad--;
+    } else {
+        carrito.splice(index, 1);
+    }
+    actualizarCarrito();
+}
+
+function quitarProducto(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+}
+
+function toggleCarrito() {
+    const cartDisplay = document.getElementById('carrito');
+    if (cartDisplay.style.display === 'block') {
+        cartDisplay.style.display = 'none';
+    } else {
+        cartDisplay.style.display = 'block';
+    }
+}
+
+function closeCart() {
+    document.getElementById("carrito").style.display = "none";
+}
+
+// Actualizar el carrito al cargar la página
+window.onload = actualizarCarrito;
+</script>
+
+<style>
+#floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+</style>
+</div>
+
+
+       
+    
+    </section>
+</main>
+
+
+<footer>
+  <p>Casa De Materiales &copy; 2024 ReformarEconstruir.com</p>
+</footer>
+
+</body>
+</html>
